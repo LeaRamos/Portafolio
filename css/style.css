@@ -1,0 +1,633 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+}
+
+
+html, body
+{
+    height: 100%;
+    overflow: visible;
+   /* CAMBIAR PARA VER LAS OTRAS PAGINAS*/
+}
+
+h1{
+    font-size: 40px;
+    margin:0;
+    padding: 0;
+}
+
+h2{
+    font-size: 30px;
+    margin:0;
+    padding: 0;
+}
+h3{
+    font-size: 25px;
+    margin:0;
+    padding: 0;
+}
+h4{
+    font-size: 20px;
+    margin:0;
+    padding: 0;
+}
+p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin:0;
+    padding: 0;
+}
+
+div.imgHero{
+    min-height: 885px;
+    height:100% ;
+    width:100% ;
+    background-image: url(/img/heroCat.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    
+}
+div.imgHero::before{
+    content:' ';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+/*//////////////////////////////////////////////*/
+
+/* HEADER */
+div.headerPrincipal{
+    width: 100%;
+    height: 60px;
+    background-color:rgba(14, 15, 16);
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center; 
+    top:-00px; /* cambiar para desaparecer*/
+    z-index: 20;
+    box-shadow: 0px 3px 10px rgba(14, 15, 16, 1);
+}
+
+div.headerPrincipal h3{
+    color: white;
+}
+
+div.headerPrincipal i{
+    color: white;
+    font-size: 25px;
+    transition: .6s;
+}
+
+div.headerPrincipal i:hover{
+    color: cyan;
+    transition: all .6;
+    cursor: pointer;
+}
+/* NAVEGACION */
+
+nav.contenedor-nav{
+    width: 100px;
+    height: 100%;
+    padding-top: 80px;
+    background-color: rgb(14, 15, 16);  
+    position: fixed;
+    left:-100px; /* cambiar para desaparecer*/
+    z-index: 20;
+    box-shadow: 3px 0px 10px rgb(14, 15, 16);
+
+}
+
+nav.contenedor-nav.MostrarNav{ /* agrega y quita la clase*/
+    left:-00px;
+}
+
+nav ul li {
+    padding: 20px 0px;
+    margin: 0px 0px 0px 15px;
+    background-color: rgb(14, 15, 16);
+    text-align: center;
+}
+
+nav ul li a{
+    display: inline-block;
+    color:white;
+}
+
+nav ul li a i{
+    font-size: 30px;
+    transition-duration: .6s;
+}
+
+i:Hover{
+    color: cyan;
+    transition-property: all;
+    transition-duration: .6s;
+}
+
+
+ /* REDES*/
+ div.redesSociales{
+    display: inline-flex;
+    width: 200px;
+    height:100px ;
+    margin-top: 50px;
+    justify-content: space-around; /* alinear horizontalmente*/
+    align-items: center;    /* alinear verticalmente*/
+    position: relative;
+ }
+
+ a.redes{
+     display: inline-block;
+     color: white;
+     font-size: 30px;
+ }
+
+ a.redes i{
+    transition-duration: .6s;
+ }  
+
+ a.redes i:hover{
+    font-size: 45px;
+ }
+
+
+ /* NOMBRE*/
+
+ div.nombre{ 
+    padding: 30px 0;
+    margin-top: 200px;
+    color: white;
+    position: relative;
+ }
+
+ div.nombre h2{
+     font-weight: lighter;
+ }
+
+ /* boton corriculum*/
+ div.nombre div.curriculum{
+    position: relative;
+     display:inline-flex;
+     width: 200px;
+     margin-top: 30px;
+     padding: 5px;
+     border: 2px solid white;
+     justify-content: space-around; /* alinear horizontalmente*/
+     align-items: center;
+     transition-duration: .6s;  
+ }
+
+ div.nombre div.curriculum a{
+     color: white;
+ }
+
+ div.nombre div.curriculum i{
+    font-size: 25px;
+ }
+
+ div.nombre div.curriculum p{
+    display:inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+ }
+
+ div.nombre div.curriculum:hover{
+     cursor: pointer;
+     border: 2px solid rgba(0, 255, 255, .7);
+     background-color: rgba(0, 0, 0, .6);
+ }
+
+ /*////////////////////////////////////////////////////////*/
+
+div.contMainPerfil , div.contenMainResumen, div.contenMainContacto,div.contenMainPortafolio{
+    background-color: rgb(26, 25, 25);
+    width: 100%;
+    min-height: 500px;
+    height:auto;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    padding-bottom: 30px;
+}
+
+div.titulo{
+    margin-top: 100px;
+    color: white;
+}
+
+
+/*  INFORMACION DEL PERFIL    */
+
+section.cajaContenedora{ 
+    background-color: rgb(14, 15, 16);
+    width: 94%;
+    min-height: 150px;
+    height:auto;
+    margin:50px auto 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+div.contMainPerfil{
+    left: -10000px; /* cambiar para desaparecer*/
+    display:none ;
+}
+.MostrarPagPerfil{ /* agrega y quita la clase*/
+    left: -0000px; /* cambiar para desaparecer*/
+    display:block ;
+}
+
+
+div.contMainPerfil section.perfilPrincipal{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 300px 300px;
+}
+
+/* foto de perfil*/
+div.contMainPerfil section.cajaContenedora div.fotoPerfil{
+    width: 150px;
+    height: 150px;
+    background-color: magenta;
+    border-radius: 50%;
+    margin: auto;
+    background-image: url(/img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.localizacion{
+    color:rgba(0, 255, 255, 0.863);
+}
+/* Descripcion del perfil*/
+div.contMainPerfil section.cajaContenedora div.descripcionPerfil{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 20px;
+}
+
+div.descripcionPerfil div.localizacion{
+    margin:10px 0;
+}
+
+div.descripcionPerfil div.infoPerfil{
+    padding-bottom: 20px;
+}
+
+div.infoPerfil div{
+    color: white;
+    text-align: left;
+    margin-top: 30px;
+}
+div.infoPerfil div a{
+    text-decoration: none;
+    color: white;
+}
+
+div.infoPerfil div i{
+    color:rgba(0, 255, 255, 0.863);
+    font-size: 30px;
+    margin-right: 5px;
+}
+div.infoPerfil div p{
+    color: rgba(0, 255, 255, 0.863);
+    display: inline-block;
+}
+
+
+
+
+div.infoPerfil div.descargar{
+    padding: 5px;
+     width: 170px;
+     transition:all .8s;
+}
+
+div.infoPerfil div.descargar span{
+    border-bottom: 2px solid cyan;
+    padding: 5px 0;
+    display: inline-block;
+}
+div.infoPerfil div.descargar:hover{
+
+    transition:all .8s;
+    border-left: 2px solid cyan; 
+    border-bottom: none;
+    background-color:  rgb(26, 25, 25);
+}
+
+/* MIS INTERESES */
+
+section.perfilIntereses{
+    display: grid;
+    grid-template-columns: 18% 80%;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-gap: 20px 10px;
+    color:white;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+section.perfilIntereses i{
+    font-size: 25px;
+    border-radius: 5px;
+    color:cyan;
+    background-color: rgb(26, 25, 25);
+    padding: 5px 0px;
+}
+section.perfilIntereses p{
+    border-radius: 5px;
+    display: inline-block;
+    text-align: start;
+    padding: 9px 0px 5px 20px;
+    background-color: rgb(26, 25, 25);
+}
+
+section.perfilIntereses p:hover{
+    cursor: default;
+    color:cyan
+}
+/* ////////////////////////////////////////////////////////////////// */
+
+/*    Pagina de resumen    */
+
+div.contenMainResumen{
+    left:-10000px; /* cambiar para desaparecer*/
+    z-index: 3;
+    display: none;/* cambiar para desaparecer*/
+}
+
+div.contenMainResumen{
+    left:-10000px; /* cambiar para desaparecer*/
+    z-index: 3;
+    display: none;/* cambiar para desaparecer*/
+}
+
+
+div.contenMainResumen section.cajaContenedora div.items{
+    position: relative;
+    padding-top: 15px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: left;
+}
+
+div.contenMainResumen h3, div.contMainPerfil h2{
+    display: inline-block;
+    border-bottom:2px solid cyan;
+} 
+
+div.contenMainResumen section.cajaContenedora div.items h4:hover:before{
+        background-color: cyan;
+    
+}
+div.contenMainResumen section.cajaContenedora div.items h4::before{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 22px;
+    left: -7px;
+    background-color: rgb(26, 25, 25);
+    border:2px solid cyan;
+    border-radius: 50%;
+    transition: 0.8s;
+}
+
+div.contenMainResumen section.cajaContenedora div.items:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 255, 255, 0.863);
+}
+
+div.contenMainResumen section.cajaContenedora div.items:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 29px;
+    left: 9px;
+    background-color: rgba(0, 255, 255, 0.863);
+}
+
+div.contenMainResumen section.cajaContenedora div.items p.fecha{
+    margin: 7px 0;
+    color: rgba(0, 255, 255, 0.863);
+}
+
+
+/* habilidades */
+div.contenMainResumen section.cajaContenedora h4{
+    color: white;
+    margin: 0;
+}
+div.contenMainResumen section.cajaContenedora div.habilidades{
+    width: 94%;
+    height: 94%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    
+}
+
+div.contenMainResumen section.cajaContenedora div.habilidades i{
+    font-size: 125px;
+    margin: auto;
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i P{
+    margin-top: 5px;
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-html5{
+    color: rgb(241, 101, 40);
+}
+
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-css3-alt{
+    color: rgb(49, 165, 224);
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-js-square{
+    color: rgb(252, 219, 61);
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-java{
+    color: rgb(230, 31, 36);
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-database{
+    color: rgb(0, 125, 183);
+}
+div.contenMainResumen section.cajaContenedora div.habilidades i.fa-cuttlefish{
+    color: rgb(57, 73, 171);
+}
+
+/* Fin de la pagina de resumen */
+
+
+/* Empiza la pagina de Portafolio */
+
+div.contenMainPortafolio{
+    left:-10000px; /* cambiar para desaparecer*/
+    z-index: 4;
+    display: none;/* cambiar para desaparecer*/ 
+}
+
+
+.galeria img {
+    box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+
+.materialbox-caption {
+    bottom: 30px;
+    right: 0;
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background: #000;
+    box-shadow: 5px 5px #fff;
+    font-size: 20px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.galeria .col {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px){
+    .materialbox-caption {
+         width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .materialbox-caption {
+         width: 70%;
+    }
+}
+/* Fin de la pagina de Portafolio */
+
+
+/* Empiza la pagina de contacto */
+
+div.contenMainContacto{
+    left:-10000px; /* cambiar para desaparecer*/
+    z-index: 5;
+    display: none;/* cambiar para desaparecer*/   
+}
+
+/* formulario*/
+form.mensaje{
+    background-color: rgb(14, 15, 16);
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 33px 40px 200px 40px ;
+    justify-content: center;
+    padding: 30px 0px;
+    grid-gap: 30px 0px;
+}
+
+form.mensaje input.inputTexto,input.inputMail,textarea{
+    height: 100%;
+    width:100% ;
+    color: white;
+    padding:2px 5px ;
+    background-color:rgb(14, 15, 16);
+    border: 1px solid rgb(14, 15, 16);
+    border-bottom:2px solid white ;
+    margin: 0 !important;
+}
+form.mensaje input.inputTexto{
+    padding: 0px 0px;
+    height:92% !important;
+}
+form.mensaje textarea{
+    height: 100%;
+}
+
+
+form.mensaje  button.enviarTexto{
+    font-size:18px ;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:rgb(14, 15, 16) ;
+    color: white;
+    border: 1px solid rgb(14, 15, 16);
+}
+form.mensaje  button.enviarTexto div{
+    display: inline-block;
+    padding: 5px 10px;
+    border-bottom: 2px solid cyan;
+    transition: 0.6;
+}
+form.mensaje textarea:focus{
+    border:2px solid black;
+    border-bottom: 2px solid cyan;
+    
+}
+form.mensaje  button.enviarTexto div:hover{
+    transition: 0.6;
+    border-bottom: 0px solid rgb(14, 15, 16);
+    border-left:2px solid cyan ;
+    background-color:rgb(40, 42, 44) ;
+    cursor: pointer;  
+}
+
+/* Datos Privados */
+
+section.privado{
+    color: white;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows:150px 150px  150px ;
+    grid-row-gap: 50px;
+    align-content: center;
+    justify-content: center;
+}
+section.privado div.datosPrivado{
+    padding: 5px 0px;
+}
+
+section.privado div.datosPrivado p{
+    margin: 15px 0px;
+    font-size: 20px;
+}
+
+section.privado div.datosPrivado i{
+    font-size: 50px;
+    color: cyan;
+}
+
+/* mapa */
+section.cajaContenedora div.mapa{
+
+    width: 100%;
+    height: 150px;
+    background-color: darkgoldenrod;
+    background-image: url(/img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
