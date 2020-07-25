@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins,sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -45,7 +45,7 @@ div.imgHero{
     min-height: 885px;
     height:100% ;
     width:100% ;
-    background-image: url(/img/heroCat.jpg);
+    background-image: url(../img/heroCat.jpg);
     background-repeat: no-repeat;
     text-align: center;
     justify-content: center;
@@ -264,7 +264,7 @@ div.contMainPerfil section.cajaContenedora div.fotoPerfil{
     background-color: magenta;
     border-radius: 50%;
     margin: auto;
-    background-image: url(/img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
+    background-image: url(../img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -288,6 +288,7 @@ div.descripcionPerfil div.localizacion{
 
 div.descripcionPerfil div.infoPerfil{
     padding-bottom: 20px;
+
 }
 
 div.infoPerfil div{
@@ -625,7 +626,7 @@ section.cajaContenedora div.mapa{
     width: 100%;
     height: 150px;
     background-color: darkgoldenrod;
-    background-image: url(/img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
+    background-image: url(img/perfil-avatar-hombre-icono-redondo_24640-14044.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
