@@ -99,8 +99,11 @@
     div.contMainPerfil section.perfilPrincipal div.infoPerfil{
         grid-column: 1/4 ;
         grid-row: 2/3;
-        display: inline-flex;
-        align-content: flex-end;
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        
+        
     }
 
     div.infoPerfil div {
